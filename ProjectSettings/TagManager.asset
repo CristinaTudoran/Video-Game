@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Venus-Enemy
+  - PreserveEnemies
+  - PreserveMarsEnemies
+  - PreserveBossEnemies
+  - Boss
+  - Boss-Enemy
+  - bulletsign
+  - Mars-Name
+  - Venus-Name
+  - transportToMars
+  - transportToVenus
+  - transportToFinalLevel
+  - transportToMarsBuilding
+  - soundtrack
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - player
+  - bullet
+  - grenade
+  - enemy
+  - main
+  - mars-name
+  - ALIEN BOSS
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 1565954235
+    locked: 0
+  - name: ALIEN BOSS
+    uniqueID: 950734363
+    locked: 0
