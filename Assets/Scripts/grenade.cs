@@ -44,11 +44,11 @@ public class grenade : MonoBehaviour
 
             if (enemy != null) // it checks if an object exists nearby to avoid null reference exceptions.
             {           
-                enemy.hurtEnemy(power);
+                enemy.damage(power);
             }
             else if(boss != null)
             {
-                boss.hurtEnemy(power/3);
+                boss.damage(power/3);
             }
         }
 

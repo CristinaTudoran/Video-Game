@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Venus-Enemy" || col.gameObject.tag == "Boss-Enemy")
         {
-            col.gameObject.GetComponent<EnemyHealthManager>().hurtEnemy(damage); // call the method hurtEnemy(damage) form the script EnemyHealthManager.
+            col.gameObject.GetComponent<EnemyHealthManager>().damage(damage); // call the method hurtEnemy(damage) form the script EnemyHealthManager.
 
             Instantiate(bulletEffect, transform.position, transform.rotation); // instantiate  the bullet effect.
 
@@ -55,7 +55,7 @@ public class Bullet : MonoBehaviour
 
         else if(col.gameObject.tag == "Boss")
         {
-            col.gameObject.GetComponent<BossHealthManager>().hurtEnemy(damage);
+            col.gameObject.GetComponent<BossHealthManager>().damage(damage);
             Instantiate(bulletEffect, transform.position, transform.rotation);
 
             Destroy(gameObject);

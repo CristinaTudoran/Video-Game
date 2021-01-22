@@ -16,7 +16,7 @@ public class CollectHealth : MonoBehaviour
     {
         if (col.gameObject.name == "player")
         {
-            col.gameObject.GetComponent<HealthManager>().addHealth(healthAvailable);
+            col.gameObject.GetComponent<PlayerHealthManager>().addHealth(healthAvailable);
             Destroy(gameObject);
         }
 

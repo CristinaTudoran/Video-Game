@@ -16,7 +16,7 @@ public class HitPlayer : MonoBehaviour
     {
         if (col.gameObject.name == "player")
         {
-            col.gameObject.GetComponent<HealthManager>().hurtPlayer(damageAmount);
+            col.gameObject.GetComponent<HealthManager>().damage(damageAmount);
         }
 
     }

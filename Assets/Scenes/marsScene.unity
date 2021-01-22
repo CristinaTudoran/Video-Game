@@ -9719,9 +9719,7 @@ GameObject:
   - component: {fileID: 590188188}
   - component: {fileID: 590188186}
   - component: {fileID: 590188185}
-  - component: {fileID: 590188184}
   - component: {fileID: 590188193}
-  - component: {fileID: 590188195}
   - component: {fileID: 590188197}
   m_Layer: 12
   m_Name: player
@@ -9730,18 +9728,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &590188184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590188183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bca2aa2652d7874988f2a6b92bb2e3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &590188185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9948,8 +9934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb63ac7690da4e93819c3798c2f75c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 1000
-  playerCurrentHealth: 0
+  MaxHealth: 1000
+  CurrentHealth: 0
   healthBar: {fileID: 1000759508}
   colour:
     serializedVersion: 2
@@ -9998,18 +9984,6 @@ CircleCollider2D:
   m_Offset: {x: -0.043563843, y: 1.7628479}
   serializedVersion: 2
   m_Radius: 1.4432526
---- !u!114 &590188195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590188183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316d07e63014d6145a2b0b2e59334c5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &590188197
 MonoBehaviour:
   m_ObjectHideFlags: 0

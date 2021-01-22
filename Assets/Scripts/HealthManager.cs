@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-// This script is attached to the plaier. It manages its health nad updates the health bar.
 public class HealthManager : MonoBehaviour
 {
 
-    public int playerMaxHealth;
-    public int playerCurrentHealth;
+    public int MaxHealth = 1000;
+    public int CurrentHealth;
     public Slider healthBar;
     public Gradient colour;
     public Image fill;
@@ -18,55 +17,37 @@ public class HealthManager : MonoBehaviour
     // sets the initial health value to maximum.
     void Start()
     {
-        playerCurrentHealth = playerMaxHealth;
-        healthBar.value = playerMaxHealth;
-        fill.color = colour.Evaluate(1f);
-
+        CurrentHealth = MaxHealth;
+        if (gameObject.tag == "Player" || gameObject.tag == "Boss")
+        {
+            healthBar.value = MaxHealth;
+            fill.color = colour.Evaluate(1f);
+        }
+        
     }
-    // checks if the player has died in which case the user has lost
+
+    // checks if the character has died in which case the user has lost
     // and the script loads the game over scene.
     void Update()
     {
-        if (playerCurrentHealth <= 0){
+        onDeath();
+    }
 
-            Destroy(gameObject);
-            SoundManagerScript.PlaySound("playerDeathSound");
-		    SceneManager.LoadScene("gameoverbutton1");
-        } 
+    public virtual void onDeath()
+    {
+        Debug.Log("The character died.");
     }
 
     // Reduces the health of the player when it gets hurt. This method is called
     // from the script HitPlayer to allow the enemies to harm the player.
     // Updates the actual health vale and the the healthh bar.
-    public void hurtPlayer(int damageToGive)
+    public void damage(int damageToGet)
     {
-       playerCurrentHealth -= damageToGive;
-       healthBar.value = playerCurrentHealth;
-       fill.color = colour.Evaluate(healthBar.normalizedValue);
-    }
-
-    // Adds an amount of health to the current health value and updates the health bar accordingly.
-    // Guards against exceeding the max health value.
-    // This method is called from the script CollectHealth to allow the player collect health
-    // and the corresponding value to be updated and reflected to the health bar.
-    public void addHealth(int healthToAdd)
-    {
-        healthUntilFull = playerMaxHealth - playerCurrentHealth;
-
-        if (healthUntilFull > healthToAdd)
+        CurrentHealth -= damageToGet; 
+        if (gameObject.tag == "Player" || gameObject.tag == "Boss")
         {
-            playerCurrentHealth += healthToAdd;
-            healthBar.value = playerCurrentHealth;
-            fill.color = colour.Evaluate(healthBar.normalizedValue);
-
-        }
-
-        else
-        {
-            playerCurrentHealth = playerMaxHealth;
-            healthBar.value = playerCurrentHealth;
+            healthBar.value = CurrentHealth;
             fill.color = colour.Evaluate(healthBar.normalizedValue);
         }
     }
-
 }
