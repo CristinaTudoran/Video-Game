@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 // This script is attached to the plaier. It manages its health nad updates the health bar.
 public class PlayerHealthManager : HealthManager
 {
+    private int healthUntilFull;
+
     public override void onDeath()
     {
         base.onDeath();
@@ -32,7 +34,6 @@ public class PlayerHealthManager : HealthManager
             CurrentHealth += healthToAdd;
             healthBar.value = CurrentHealth;
             fill.color = colour.Evaluate(healthBar.normalizedValue);
-
         }
 
         else

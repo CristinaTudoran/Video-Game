@@ -24,7 +24,7 @@ public class generateAliens : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Arachae Final Boss Fight")
             {
                 Instantiate(bossSceneAlien, new Vector3(Random.Range(550f, 554f), -440.24f, 0), Quaternion.identity, preserveEnemiesObject); // generate a new alien
-                yield return new WaitForSeconds(10f); // wait 15secs and then repeat.
+                yield return new WaitForSeconds(5f); // wait 5secs and then repeat.
             }
         }
     }

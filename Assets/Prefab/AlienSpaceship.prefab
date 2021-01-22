@@ -192,8 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a293c3046224ce486232cff4fa86a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
-  CurrentHealth: 0
+  MaxHealth: 100
   healthBar: {fileID: 0}
   colour:
     serializedVersion: 2
@@ -225,7 +224,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 0}
-  healthUntilFull: 0
   alienDrop: {fileID: 5899991956178612797, guid: c5c6c44c118cc4b4da9bb85c7d4338a3,
     type: 3}
 --- !u!114 &1250697896310272156

@@ -441,8 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dee0bcc0a954e26ab75bbdd1c2d068, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossMaxHealth: 1000
-  bossCurrentHealth: 0
+  MaxHealth: 1000
   healthBar: {fileID: 793781659}
   colour:
     serializedVersion: 2

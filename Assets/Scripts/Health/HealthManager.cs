@@ -7,12 +7,11 @@ using UnityEngine.SceneManagement;
 public class HealthManager : MonoBehaviour
 {
 
-    public int MaxHealth = 1000;
-    public int CurrentHealth;
+    public int MaxHealth;
+    protected int CurrentHealth;
     public Slider healthBar;
     public Gradient colour;
     public Image fill;
-    public int healthUntilFull;
 
     // sets the initial health value to maximum.
     void Start()
